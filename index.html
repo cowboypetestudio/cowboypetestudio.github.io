@@ -70,12 +70,19 @@
     .site-nav .count { color: var(--ink-soft); }
 
     /* ── intro strip ── */
-    .intro {
+    .intro-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
       padding: 14px 0 18px;
-      max-width: 720px;
-      font-size: 13px; line-height: 1.5;
-    }
-    .intro b { font-weight: bold; }
+}
+.intro {
+  max-width: 720px;
+  font-size: 13px; line-height: 1.5;
+  margin: 0;
+}
+.intro b { font-weight: bold; }
 
     /* ── 90s department store headshot ── */
     .headshot-plain {
