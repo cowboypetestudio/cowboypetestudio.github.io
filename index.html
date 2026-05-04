@@ -77,6 +77,19 @@
     }
     .intro b { font-weight: bold; }
 
+    /* ── 90s department store headshot ── */
+    .headshot-plain {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 1px solid var(--ink);
+      display: block;
+}
+    @media (max-width: 640px) {
+      .intro-row { grid-template-columns: 1fr; }
+      .headshot-plain { width: 96px; height: 96px; }
+}
+
     /* ── product grid ── */
     .grid {
       display: grid;
@@ -252,28 +265,8 @@
     <p class="intro">
       Consider this less a wishlist and more a window into my unresolved consumer thoughts.
     </p>
-
-  <!-- 90s department store headshot -->
-  <figure class="headshot" aria-label="Official portrait of Pedro">
-    <div class="hs-bar">
-      <span>PORTRAIT STUDIO</span>
-      <span>SITTING #047</span>
-    </div>
-    <div class="hs-frame">
-      <span class="hs-stamp">PROOF</span>
-      <img class="hs-subject" src="images/pedro.jpg" alt="Pedro" style="object-fit: cover;">
-      <span class="hs-date">02/MAY/94</span>
-    </div>
-    <figcaption class="hs-plaque">
-      <div class="hs-name">Pedro Castillo</div>
-      <div class="hs-title">PROPRIETOR</div>
-    </figcaption>
-    <div class="hs-foot">
-      <span class="blink-dot"></span>OFFICIAL PORTRAIT<span class="blink-dot"></span>
-    </div>
-  </figure>
+    <img class="headshot-plain" src="images/pedro.jpg" alt="Pedro">
 </div>
-  
     <!-- grid -->
     <div class="grid" id="grid"></div>
 
