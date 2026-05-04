@@ -97,7 +97,21 @@
       .intro-row { grid-template-columns: 1fr; }
       .headshot-plain { width: 96px; height: 96px; }
     }
-
+    .headshot-quote {
+      font-size: 11px;
+      line-height: 1.4;
+      color: var(--ink-soft);
+      font-style: italic;
+      text-align: left;
+    }
+  .headshot-quote cite {
+    display: block;
+    margin-top: 4px;
+    font-style: normal;
+    color: var(--ink);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    }
     /* ── product grid ── */
     .grid {
       display: grid;
@@ -274,7 +288,14 @@
       <p class="intro">
         Consider this less a wishlist and more a window into my unresolved consumer thoughts.
       </p>
+      <figure class="headshot-block">
       <img class="headshot-plain" src="images/pedro.jpg" alt="Pedro">
+      <figcaption class="headshot-quote">
+        &ldquo;I&rsquo;m a man of many hobbies and interests&hellip;
+        none of which I&rsquo;ve mastered, but all of which I&rsquo;ve bought gear for.&rdquo;
+        <cite>&mdash; Pedro C.</cite>
+      </figcaption>
+    </figure>
   </div>
 
     <!-- grid -->
