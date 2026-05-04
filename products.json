@@ -63,4 +63,12 @@
     "url": "https://example.com/cups",
     "image": ""
   }
+  {
+    "name": "Espresso Cups (Pair)",
+    "brand": "Hasami",
+    "price": "$36",
+    "spec": "Black · 3 oz",
+    "url": "https://example.com/cups",
+    "image": ""
+  }
 ]
