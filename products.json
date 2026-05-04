@@ -120,11 +120,19 @@
     "image": "images/13.jpg"
   },
   {
+    "name": "Maclock",
+    "brand": "Kokogol",
+    "price": "$30",
+    "spec": "One Size",
+    "url": "https://kokogol.com/products/maclock",
+    "image": "images/38.jpg"
+  },
+  {
     "name": "Geographic Tee",
     "brand": "Katin",
     "price": "$37",
     "spec": "Black · Size: L",
-    "url": "hhttps://katinusa.com/collections/tees/products/geographic-box-fit-tee",
+    "url": "https://katinusa.com/collections/tees/products/geographic-box-fit-tee",
     "image": "images/14.jpg"
   },
   {
