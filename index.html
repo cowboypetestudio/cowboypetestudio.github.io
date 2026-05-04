@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pedro's Wish List</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+
+  <style>
+    :root {
+      --bg: #c0c0c0;
+      --ink: #000;
+      --ink-soft: #444;
+      --link: #0000ee;
+      --link-visited: #551a8b;
+      --rule: #808080;
+    }
+
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Pixelated MS Sans Serif", "MS Sans Serif", Tahoma, sans-serif;
+      font-size: 12px;
+    }
+
+    /* ── shell ── */
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 22px 18px 64px;
+    }
+
+    /* ── header ── */
+    header.site {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      padding: 6px 0 10px;
+      border-bottom: 1px solid var(--ink);
+    }
+    .brand {
+      font-family: "Pixelated MS Sans Serif", "MS Sans Serif", Tahoma, sans-serif;
+      font-size: 22px; font-weight: bold;
+      letter-spacing: 0.02em; line-height: 1;
+    }
+    .brand .dot { display: inline-block; width: 9px; height: 9px;
+      background: #000; margin-right: 7px; vertical-align: 2px; }
+
+    .site-meta {
+      font-size: 11px; color: var(--ink); line-height: 1.4;
+      text-align: right;
+    }
+    .site-meta .vol { letter-spacing: 0.04em; }
+    .site-meta a { color: var(--link); }
+    .site-meta a:visited { color: var(--link-visited); }
+
+    .site-nav {
+      display: flex; gap: 4px; align-items: center;
+      padding: 8px 0 0;
+      font-size: 11px;
+    }
+    .site-nav .spacer { flex: 1; }
+    .site-nav .count { color: var(--ink-soft); }
+
+    /* ── intro strip ── */
+    .intro {
+      padding: 14px 0 18px;
+      max-width: 720px;
+      font-size: 13px; line-height: 1.5;
+    }
+    .intro b { font-weight: bold; }
+
+    /* ── product grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px 18px;
+    }
+    @media (max-width: 980px) { .grid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+    @media (max-width: 720px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 460px) { .grid { grid-template-columns: 1fr; } }
+
+    .item {
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+      cursor: pointer;
+    }
+    .item .meta-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 10px;
+      font-size: 12px; line-height: 1.3;
+      margin-bottom: 6px;
+      min-height: 16px;
+    }
+    .item .name {
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: bold;
+      color: var(--ink);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      flex: 1; min-width: 0;
+    }
+    .item .price {
+      color: var(--ink); white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .item .price.sold { color: #aa0000; }
+
+    .item .frame {
+      aspect-ratio: 1 / 1;
+      background: #fff;
+      border: 1px solid var(--ink);
+      box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #f0f0f0;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      transition: background 120ms ease;
+    }
+    .item:hover .frame { background: #f5f5f5; }
+    .item .frame img {
+      width: 100%; height: 100%; object-fit: contain;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    .item .ph {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 8px; padding: 12px; box-sizing: border-box;
+      color: #888; text-align: center;
+    }
+    .item .ph .ph-title {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
+      color: #666; line-height: 1.2;
+    }
+    .item .ph svg { opacity: 0.6; }
+
+    .item .sub {
+      margin-top: 6px;
+      font-size: 11px; color: var(--ink-soft);
+      line-height: 1.3;
+      display: flex; gap: 4px; align-items: baseline;
+    }
+    .item .num {
+      font-family: "Pixelated MS Sans Serif", "MS Sans Serif", monospace;
+      color: #888;
+    }
+    .item .spec { color: var(--ink-soft); }
+
+    /* ── footer ── */
+    footer.site {
+      margin-top: 56px; padding-top: 14px;
+      border-top: 1px solid var(--ink);
+      display: flex; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      font-size: 11px;
+    }
+    footer.site .links { display: flex; gap: 14px; }
+    footer.site a { color: var(--link); }
+    footer.site a:visited { color: var(--link-visited); }
+    footer.site .copyr { color: var(--ink-soft); }
+
+    /* ── empty state ── */
+    .empty {
+      grid-column: 1 / -1;
+      padding: 48px 16px; text-align: center;
+      border: 1px dashed var(--rule);
+      color: var(--ink-soft);
+      display: flex; flex-direction: column; gap: 12px; align-items: center;
+    }
+    .empty b { color: var(--ink); }
+
+    /* ── edit dialog ── */
+    .dialog-overlay {
+      position: fixed; inset: 0; z-index: 100;
+      background: rgba(0, 0, 0, 0.25);
+      display: none; align-items: flex-start; justify-content: center;
+      padding: 28px 16px;
+      overflow: auto;
+    }
+    .dialog-overlay.open { display: flex; }
+    .edit-window { width: min(680px, 100%); }
+    .edit-window .window-body {
+      max-height: calc(100vh - 160px); overflow: auto;
+      padding: 12px;
+    }
+    .form-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    }
+    @media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-row { display: flex; flex-direction: column; gap: 2px; }
+    .form-row label { font-size: 11px; }
+    .form-row input { font-family: inherit; font-size: 12px; }
+
+    .item-edit-row {
+      display: grid; grid-template-columns: 48px 1fr auto;
+      gap: 8px; align-items: center;
+      padding: 6px 4px;
+      border-bottom: 1px dotted #aaa;
+    }
+    .item-edit-row:last-child { border-bottom: 0; }
+    .thumb-sm {
+      width: 48px; height: 48px;
+      background: #fff; border: 1px solid #000;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; font-size: 9px; color: #888;
+    }
+    .thumb-sm img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .item-edit-row .info b { font-size: 12px; }
+    .item-edit-row .info small {
+      display: block; font-size: 11px; color: #555;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .actions { display: flex; gap: 2px; }
+
+    /* misc */
+    .row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .muted { color: var(--ink-soft); }
+    .right { text-align: right; }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- header -->
+    <header class="site">
+      <div>
+        <div class="brand"><span class="dot" style="color: rgb(0, 38, 255); background-color: rgb(166, 0, 255)"></span><span style="color: rgb(0, 38, 255)">Pedro&rsquo;s Wish List</span></div>
+        <div class="muted" style="margin-top:4px; font-size: 11px;">
+          A small index of things, kept short.
+        </div>
+      </div>
+      <div class="site-meta">
+        <div class="vol">VOL. 01 · WISHLIST · MMXXVI</div>
+        <div>Last updated <span id="last-updated">May 1, 2026</span></div>
+      </div>
+    </header>
+
+    <div class="site-nav">
+      <span class="count" id="count-label">— items</span>
+      <span class="spacer"></span>
+      <button id="edit-btn">Edit list</button>
+    </div>
+
+    <!-- intro -->
+    <p class="intro">
+      A small set of things I&rsquo;ve been quietly meaning to own. No pressure
+      to pick anything from this; consider it a window into the household&rsquo;s
+      current preoccupations.
+    </p>
+
+    <!-- grid -->
+    <div class="grid" id="grid"></div>
+
+    <!-- footer -->
+    <footer class="site">
+      <div class="links">
+        <a href="#">Email</a>
+        <a href="#">Address</a>
+        <a href="#">Notes</a>
+      </div>
+      <div class="copyr">Pedro&rsquo;s Wish List &copy; 2026</div>
+    </footer>
+  </div>
+
+  <!-- ── Edit dialog ── -->
+  <div class="dialog-overlay" id="edit-overlay">
+    <div class="window edit-window" role="dialog" aria-modal="true">
+      <div class="title-bar">
+        <div class="title-bar-text">Edit Wish List</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close" id="edit-close-x"></button>
+        </div>
+      </div>
+      <div class="window-body">
+
+        <fieldset>
+          <legend>Add a new item</legend>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="f-name">Name *</label>
+              <input id="f-name" placeholder="e.g. Library Reading Lamp" />
+            </div>
+            <div class="form-row">
+              <label for="f-brand">Brand</label>
+              <input id="f-brand" placeholder="e.g. Anglepoise" />
+            </div>
+            <div class="form-row">
+              <label for="f-price">Price</label>
+              <input id="f-price" placeholder="e.g. $200" />
+            </div>
+            <div class="form-row">
+              <label for="f-spec">Spec</label>
+              <input id="f-spec" placeholder="Size, color, edition…" />
+            </div>
+            <div class="form-row" style="grid-column: 1 / -1;">
+              <label for="f-url">Product URL</label>
+              <input id="f-url" placeholder="https://…" />
+            </div>
+          </div>
+          <div class="form-row" style="margin-top:6px;">
+            <label for="f-image">Image (upload or paste URL)</label>
+            <div class="row">
+              <input id="f-image" placeholder="https://…/photo.jpg" style="flex:1; min-width: 200px;" />
+              <input id="f-file" type="file" accept="image/*" />
+              <span id="f-image-status" class="muted" style="font-size:11px;"></span>
+            </div>
+          </div>
+          <div class="row" style="margin-top:8px;">
+            <button id="add-btn">Add to List</button>
+            <button id="reset-btn">Reset</button>
+          </div>
+        </fieldset>
+
+        <fieldset style="margin-top:10px;">
+          <legend>Existing items (<span id="item-count">0</span>)</legend>
+          <div id="edit-list"></div>
+          <div class="row" style="margin-top:6px;">
+            <button id="seed-btn">Load Examples</button>
+            <button id="clear-btn">Clear All</button>
+          </div>
+        </fieldset>
+
+      </div>
+      <div class="status-bar">
+        <p class="status-bar-field">Changes save automatically.</p>
+        <p class="status-bar-field"><button id="edit-close-ok">Close</button></p>
+      </div>
+    </div>
+  </div>
+
+<script>
+(function () {
+  // ─── data ──────────────────────────────────────────────
+  var STORAGE_KEY = "gift-list-products";
+  function uid() { return Math.random().toString(36).slice(2, 10); }
+
+  var SAMPLE = [
+    { id: uid(), name: "Library Reading Lamp", brand: "Anglepoise",
+      price: "$329", spec: "Type 75 / Margaret Howell",
+      url: "https://example.com/lamp", image: "" },
+    { id: uid(), name: "Cotton Crewneck", brand: "Sunspel",
+      price: "$140", spec: "Size M · Navy",
+      url: "https://example.com/crew", image: "" },
+    { id: uid(), name: "Pocket Notebook (Set of 3)", brand: "Midori MD",
+      price: "$24", spec: "A6 · Blank",
+      url: "https://example.com/notebook", image: "" },
+    { id: uid(), name: "Field Watch", brand: "Hamilton Khaki",
+      price: "$495", spec: "38mm · Black dial",
+      url: "https://example.com/watch", image: "" },
+    { id: uid(), name: "Linen Bath Towel", brand: "Hawkins New York",
+      price: "$58", spec: "Bone · 30 × 56",
+      url: "https://example.com/towel", image: "" },
+    { id: uid(), name: "Cast Iron Skillet", brand: "Borough Furnace",
+      price: "$210", spec: "10 in · Smoothed",
+      url: "https://example.com/skillet", image: "" },
+    { id: uid(), name: "Chore Coat", brand: "Vetra",
+      price: "$185", spec: "Hydrone · Size 2",
+      url: "https://example.com/coat", image: "" },
+    { id: uid(), name: "Espresso Cups (Pair)", brand: "Hasami",
+      price: "$36", spec: "Black · 3 oz",
+      url: "https://example.com/cups", image: "" }
+  ];
+
+  var products = [];
+
+  // storage adapter
+  var storage = {
+    async get(k) {
+      try {
+        if (window.storage && typeof window.storage.getItem === "function") {
+          var v = await window.storage.getItem(k);
+          return v == null ? null : v;
+        }
+      } catch (e) {}
+      try { return localStorage.getItem(k); } catch (e) { return null; }
+    },
+    async set(k, v) {
+      try {
+        if (window.storage && typeof window.storage.setItem === "function") {
+          await window.storage.setItem(k, v); return;
+        }
+      } catch (e) {}
+      try { localStorage.setItem(k, v); } catch (e) {}
+    }
+  };
+
+  function persist() { storage.set(STORAGE_KEY, JSON.stringify(products)); }
+  function escapeHtml(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c];
+    });
+  }
+  function pad2(n) { return String(n).padStart(2, "0"); }
+
+  // ─── render: grid ──────────────────────────────────────
+  function renderGrid() {
+    var grid = document.getElementById("grid");
+    document.getElementById("count-label").textContent =
+      pad2(products.length) + " " + (products.length === 1 ? "item" : "items");
+
+    if (!products.length) {
+      grid.innerHTML =
+        '<div class="empty">' +
+          '<b>The list is empty.</b>' +
+          '<div>Open the editor to add items, or load some examples.</div>' +
+          '<div class="row" style="justify-content:center;">' +
+            '<button id="empty-edit">Edit list</button>' +
+            '<button id="empty-seed">Load examples</button>' +
+          '</div>' +
+        '</div>';
+      document.getElementById("empty-edit").addEventListener("click", openEdit);
+      document.getElementById("empty-seed").addEventListener("click", seed);
+      return;
+    }
+
+    grid.innerHTML = products.map(function (p, i) {
+      var img = p.image
+        ? '<img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.name) + '">'
+        : '<div class="ph">'
+          + '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">'
+            + '<rect x="3" y="3" width="18" height="18"/><circle cx="9" cy="9" r="1.5"/><path d="M21 15l-5-5L5 21"/>'
+          + '</svg>'
+          + '<div class="ph-title">' + escapeHtml(p.brand || p.name || "—") + '</div>'
+          + '</div>';
+
+      var subBits = [];
+      subBits.push('<span class="num">' + pad2(i + 1) + '</span>');
+      if (p.brand) subBits.push('<span>' + escapeHtml(p.brand) + '</span>');
+      if (p.spec)  subBits.push('<span class="spec">' + escapeHtml(p.spec) + '</span>');
+
+      var inner = ''
+        + '<div class="meta-row">'
+        +   '<span class="name">' + escapeHtml(p.name || "Untitled") + '</span>'
+        +   (p.price ? '<span class="price">' + escapeHtml(p.price) + '</span>' : '')
+        + '</div>'
+        + '<div class="frame">' + img + '</div>'
+        + '<div class="sub">' + subBits.join(' &middot; ') + '</div>';
+
+      if (p.url) {
+        return '<a class="item" href="' + escapeHtml(p.url)
+          + '" target="_blank" rel="noopener">' + inner + '</a>';
+      }
+      return '<div class="item">' + inner + '</div>';
+    }).join("");
+  }
+
+  // ─── render: edit list ─────────────────────────────────
+  function renderEditList() {
+    var box = document.getElementById("edit-list");
+    document.getElementById("item-count").textContent = products.length;
+    if (!products.length) {
+      box.innerHTML = '<div class="muted" style="padding:10px;text-align:center;font-size:12px;">No items yet. Add some above.</div>';
+      return;
+    }
+    box.innerHTML = products.map(function (p, i) {
+      var img = p.image
+        ? '<img src="' + escapeHtml(p.image) + '" alt="">'
+        : '<span>—</span>';
+      var sub = [];
+      if (p.brand) sub.push(escapeHtml(p.brand));
+      if (p.price) sub.push(escapeHtml(p.price));
+      if (p.spec)  sub.push(escapeHtml(p.spec));
+      if (p.url)   sub.push(escapeHtml(p.url.replace(/^https?:\/\//, '')));
+      return ''
+        + '<div class="item-edit-row" data-id="' + p.id + '">'
+        +   '<div class="thumb-sm">' + img + '</div>'
+        +   '<div class="info">'
+        +     '<b>' + pad2(i+1) + '. ' + escapeHtml(p.name || "Untitled") + '</b>'
+        +     '<small>' + sub.join(' &middot; ') + '</small>'
+        +   '</div>'
+        +   '<div class="actions">'
+        +     '<button data-act="up"   ' + (i === 0 ? 'disabled' : '') + '>▲</button>'
+        +     '<button data-act="down" ' + (i === products.length - 1 ? 'disabled' : '') + '>▼</button>'
+        +     '<button data-act="edit">Edit</button>'
+        +     '<button data-act="del">Del</button>'
+        +   '</div>'
+        + '</div>';
+    }).join("");
+  }
+
+  // ─── mutators ──────────────────────────────────────────
+  function add(p) {
+    products.push(Object.assign({ id: uid() }, p));
+    persist(); renderGrid(); renderEditList();
+  }
+  function update(id, patch) {
+    products = products.map(function (p) { return p.id === id ? Object.assign({}, p, patch) : p; });
+    persist(); renderGrid(); renderEditList();
+  }
+  function remove(id) {
+    products = products.filter(function (p) { return p.id !== id; });
+    persist(); renderGrid(); renderEditList();
+  }
+  function move(id, dir) {
+    var i = products.findIndex(function (p) { return p.id === id; });
+    if (i < 0) return;
+    var j = i + dir;
+    if (j < 0 || j >= products.length) return;
+    var copy = products.slice();
+    var tmp = copy[i]; copy[i] = copy[j]; copy[j] = tmp;
+    products = copy; persist(); renderGrid(); renderEditList();
+  }
+  function seed() {
+    products = SAMPLE.map(function (s) { return Object.assign({}, s, { id: uid() }); });
+    persist(); renderGrid(); renderEditList();
+  }
+  function clearAll() {
+    if (!confirm("Clear all items?")) return;
+    products = []; persist(); renderGrid(); renderEditList();
+  }
+
+  // ─── add form ──────────────────────────────────────────
+  function readFile(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { resolve(r.result); };
+      r.onerror = reject;
+      r.readAsDataURL(file);
+    });
+  }
+
+  document.getElementById("f-file").addEventListener("change", async function (e) {
+    var f = e.target.files && e.target.files[0]; if (!f) return;
+    try {
+      var url = await readFile(f);
+      document.getElementById("f-image").value = url;
+      document.getElementById("f-image-status").textContent =
+        "Image attached (" + Math.round(f.size / 1024) + " KB)";
+    } catch (err) { console.warn(err); }
+  });
+
+  function resetForm() {
+    ["f-name","f-brand","f-price","f-spec","f-url","f-image"].forEach(function (id) {
+      document.getElementById(id).value = "";
+    });
+    document.getElementById("f-file").value = "";
+    document.getElementById("f-image-status").textContent = "";
+  }
+
+  document.getElementById("add-btn").addEventListener("click", function () {
+    var name = document.getElementById("f-name").value.trim();
+    if (!name) { alert("Name is required."); return; }
+    add({
+      name: name,
+      brand: document.getElementById("f-brand").value.trim(),
+      price: document.getElementById("f-price").value.trim(),
+      spec:  document.getElementById("f-spec").value.trim(),
+      url:   document.getElementById("f-url").value.trim(),
+      image: document.getElementById("f-image").value.trim()
+    });
+    resetForm();
+  });
+  document.getElementById("reset-btn").addEventListener("click", resetForm);
+  document.getElementById("seed-btn").addEventListener("click", seed);
+  document.getElementById("clear-btn").addEventListener("click", clearAll);
+
+  // delegated edit-list buttons
+  document.getElementById("edit-list").addEventListener("click", function (e) {
+    var btn = e.target.closest("button"); if (!btn) return;
+    var row = e.target.closest(".item-edit-row"); if (!row) return;
+    var id = row.dataset.id;
+    var act = btn.dataset.act;
+    var item = products.find(function (p) { return p.id === id; });
+    if (!item) return;
+    if (act === "up") move(id, -1);
+    else if (act === "down") move(id, +1);
+    else if (act === "del") {
+      if (confirm("Delete \"" + (item.name || "this item") + "\"?")) remove(id);
+    } else if (act === "edit") {
+      var name  = prompt("Name:", item.name || ""); if (name == null) return;
+      var brand = prompt("Brand:", item.brand || ""); if (brand == null) return;
+      var price = prompt("Price:", item.price || ""); if (price == null) return;
+      var spec  = prompt("Spec:", item.spec || ""); if (spec == null) return;
+      var url   = prompt("URL:", item.url || ""); if (url == null) return;
+      update(id, {
+        name: name.trim(), brand: brand.trim(), price: price.trim(),
+        spec: spec.trim(), url: url.trim()
+      });
+    }
+  });
+
+  // ─── edit dialog open/close ────────────────────────────
+  var overlay = document.getElementById("edit-overlay");
+  function openEdit() { overlay.classList.add("open"); renderEditList(); }
+  function closeEdit() { overlay.classList.remove("open"); }
+  document.getElementById("edit-btn").addEventListener("click", openEdit);
+  document.getElementById("edit-close-x").addEventListener("click", closeEdit);
+  document.getElementById("edit-close-ok").addEventListener("click", closeEdit);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) closeEdit();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && overlay.classList.contains("open")) closeEdit();
+  });
+
+  // ─── boot ──────────────────────────────────────────────
+  (async function boot() {
+    var raw = await storage.get(STORAGE_KEY);
+    if (raw) {
+      try {
+        var parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) products = parsed;
+      } catch (e) {}
+    }
+    if (!products.length) {
+      products = SAMPLE.map(function (s) { return Object.assign({}, s, { id: uid() }); });
+      persist();
+    }
+    renderGrid();
+    renderEditList();
+  })();
+})();
+</script>
+</body>
+</html>
