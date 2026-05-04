@@ -8,7 +8,7 @@
     "image": "images/liteduffel.jpg"
   },
   {
-    "name": "Barrel Driver Headcover",
+    "name": "Driver Headcover",
     "brand": "Taylor Made",
     "price": "$50",
     "spec": "Color: Grey",
@@ -19,7 +19,7 @@
     "name": "AIM Sunnies",
     "brand": "Always in Motion",
     "price": "$125",
-    "spec": "Black Crystal · Blank",
+    "spec": "Black Crystal",
     "url": "https://alwaysinmotion.co.uk/products/aim-sunnies-black-crystal?variant=56086452961606",
     "image": "images/sunnies.jpg"
   },
@@ -40,28 +40,180 @@
     "image": "images/golfshoes.jpg"
   },
   {
-    "name": "Cast Iron Skillet",
-    "brand": "Borough Furnace",
-    "price": "$210",
-    "spec": "10 in · Smoothed",
-    "url": "https://example.com/skillet",
-    "image": "images/liteduffel.jpg"
+    "name": "Samba OG Shoes",
+    "brand": "Adidas",
+    "price": "$100",
+    "spec": "Size: Women 10",
+    "url": "https://www.adidas.com/us/samba-og-shoes/IE5836.html",
+    "image": "images/samba.jpg"
   },
   {
-    "name": "Chore Coat",
-    "brand": "Vetra",
-    "price": "$185",
-    "spec": "Hydrone · Size 2",
-    "url": "https://example.com/coat",
-    "image": ""
+    "name": "Annual Subscription",
+    "brand": "The Golfer's Journal",
+    "price": "$90",
+    "spec": "",
+    "url": "https://www.golfersjournal.com/gift/",
+    "image": "images/golfsubscription.jpg"
   },
   {
-    "name": "Espresso Cups (Pair)",
-    "brand": "Hasami",
-    "price": "$36",
-    "spec": "Black · 3 oz",
+    "name": "Ezra Shirt",
+    "brand": "Katin",
+    "price": "$75",
+    "spec": "Black · Size: L",
+    "url": "https://katinusa.com/products/ezra-shirt?variant=43112139718790&utm_source=google&utm_medium=paid&utm_campaign=17382839259&utm_content=137649786895&utm_term=&gadid=601590649391&gad_source=1&gad_campaignid=17382839259&gbraid=0AAAAADST0vhwGypTom0h2PdVZM26OsNc3&gclid=CjwKCAjw5NvPBhAoEiwA_2egfgQ88J7d8x9B-DdVkLU7js2NqXVBDLKk7MauG4168ZWOi86h07jvFxoCvy0QAvD_BwE",
+    "image": "images/ezrashirt.jpg"
+  },
+  {
+    "name": "LS Knit Polo",
+    "brand": "Rhythm",
+    "price": "$90",
+    "spec": "Chocolate · Size: L",
+    "url": "https://rhythmlivin.com/products/vintage-ls-knit-polo-chocolate-cd26?variant=44211314360413&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=23498022375&gbraid=0AAAAACc8kP6aGpJV_YYtYqs1q8DoHpXpW&gclid=CjwKCAjw5NvPBhAoEiwA_2egfnLFFxRbfA4wm_fXt2KVGGD7AfFgdwnjXQr0YMQlGf7qv0pagjx80BoCdqUQAvD_BwEs",
+    "image": "images/vintageknit.jpg"
+  },
+  {
+    "name": "Essential Tee",
+    "brand": "Rhythm",
+    "price": "$40",
+    "spec": "Blue · Size: L",
+    "url": "https://rhythmlivin.com/collections/mens-t-shirts/products/essential-heavyweight-ss-t-shirt-slate-smu26",
+    "image": "images/blueshirt.jpg"
+  },
+  {
+    "name": "Wallabee",
+    "brand": "Clarks",
+    "price": "$140",
+    "spec": "Cola · Size: 9",
+    "url": "https://www.clarks.com/en-us/wallabee/26155518-p",
+    "image": "images/wallabee.jpg"
+  },
+  {
+    "name": "Golf Brush",
+    "brand": "Dimple & Divot",
+    "price": "$45",
+    "spec": "Black/White",
+    "url": "https://dimpledivot.com/products/hickory-golf-brush-murphy?variant=42642383667352&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=21548180312&gbraid=0AAAAApSQte2wDdI3058BmVtqB0pd0eriD&gclid=CjwKCAjw5NvPBhAoEiwA_2egfkFSqHUWnMwmjKyUkmwL8ks6TkUyDTzJ8nAevDUqduGzwEZFnAyMkhoCyGkQAvD_BwE",
+    "image": "images/brush.jpg"
+  },
+  {
+    "name": "Lakeside Tee",
+    "brand": "Walker Golf",
+    "price": "$50",
+    "spec": "Size: L",
+    "url": "https://www.walkergolfthings.com/products/lakeside-t-shirt?variant=59103981666385&country=AU&currency=AUD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gad_campaignid=21966165499&gbraid=0AAAAA-GapcQcw91x_cg67ObsMXyQdg5d4&gclid=CjwKCAjw5NvPBhAoEiwA_2egfolk06Ycq8I_ZCezoakwL46sGqsVklGS8QeaSUNNXyG4Hqeirpd1BhoCy9IQAvD_BwE",
+    "image": "images/lakesideshirt.jpg"
+  },
+  {
+    "name": "Geographic Tee",
+    "brand": "Katin",
+    "price": "$37",
+    "spec": "Black · Size: L",
     "url": "https://example.com/cups",
     "image": ""
+  },
+  {
+    "name": "Just a Placeholder",
+    "brand": "Hasami",
+    "price": "Free",
+    "spec": "Black · 3 oz",
+    "url": "https://katinusa.com/collections/tees/products/geographic-box-fit-tee",
+    "image": "images/geoshirt.jpg"
+  },
+  {
+    "name": "Green Hat",
+    "brand": "Metalwood",
+    "price": "$42",
+    "spec": "Spruce · One Size",
+    "url": "https://www.fwrd.com/product-metalwood-studio-metal-logo-5-panel-hat-in-spruce/MDIF-MA2/?d=Mens&tCurrency=USD&tCountryCode=US&utm_source=google&utm_medium=cpc&utm_campaign=PMax:+Product+Listing+Ads+-+FWRD+-+Mens&gclsrc=aw.ds&gad_source=1&gad_campaignid=19672048316&gbraid=0AAAAADyLQd4YGpgNuPIGRgM5_jMn_vZdP&gclid=CjwKCAjw5NvPBhAoEiwA_2egfkdKWOljYo-3wB_xBLgJ4GVwdfvPStYZ7wM5QHqbqYGg_fLVSy0iahoCY-EQAvD_BwE",
+    "image": "images/metalgreen.jpg"
+  },
+  {
+    "name": "Camo Hat",
+    "brand": "Metalwood",
+    "price": "$42",
+    "spec": "Camo · One Size",
+    "url": "https://www.fwrd.com/product-metalwood-studio-metal-logo-5panel-hat-in-real-leaf-camo-white/MDIF-MA18/?d=Mens&sectionURL=https%3A%2F%2Fwww.google.com%2F&code=MDIF-MA18&srcType=dp_coloroption&size=One%20Size",
+    "image": "images/metalcamo.jpg"
+  },
+  {
+    "name": "Beach Towel",
+    "brand": "Katin",
+    "price": "$39",
+    "spec": "Moss · One Size",
+    "url": "https://katinusa.com/collections/beach-towels-umbrellas/products/cedar-towel",
+    "image": "images/beachtowel.jpg"
+  },
+  {
+    "name": "Socks",
+    "brand": "Metalwood",
+    "price": "$16",
+    "spec": "White · One Size",
+    "url": "https://metalwood.studio/products/metal-logo-quarter-sock-white-blurple",
+    "image": "images/socks.jpg"
+  },
+  {
+    "name": "Grinder",
+    "brand": "Aime Leon Dore",
+    "price": "$65",
+    "spec": "One Size",
+    "url": "https://www.aimeleondore.com/products/large-unisphere-herb-grinder-1?pb=0",
+    "image": "images/grinder.jpg"
+  },
+  {
+    "name": "Surf Trunks",
+    "brand": "Katin",
+    "price": "$79",
+    "spec": "Duck · Size: 32",
+    "url": "https://katinusa.com/collections/all-trunks/products/otg-archer-surf-trunk",
+    "image": "images/surftrunks.jpg"
+  },
+  {
+    "name": "Brown Hat",
+    "brand": "WHR",
+    "price": "$65",
+    "spec": "Brown · One Size",
+    "url": "https://www.whr.institute/products/promo-hat-brown",
+    "image": "images/westernhat.jpg"
+  },
+  {
+    "name": "Mini Newspaper Box",
+    "brand": "Only NY",
+    "price": "$84",
+    "spec": "Red",
+    "url": "https://onlyny.com/products/mini-newspaper-box?srsltid=AfmBOoqKq5LkHj06Aj2itm5MwAchIPIfj-6wXgBvyX2ewqPcrhMbNPJk&variant=42200641503316",
+    "image": "images/minibox.jpg"
+  },
+  {
+    "name": "Hoodie",
+    "brand": "IDIOMA",
+    "price": "$145",
+    "spec": "Heather Ash · Size: XL",
+    "url": "https://example.com/cups",
+    "image": ""
+  },
+  {
+    "name": "Just a Placeholder",
+    "brand": "Hasami",
+    "price": "Free",
+    "spec": "Black · 3 oz",
+    "url": "https://idioma.world/products/science-culture-hood?srsltid=AfmBOorrGFDDvYebex5xVbN3DMgUt73OHNlL4xBe9OiR_kvGZ-MsJltv",
+    "image": "images/sciencehoodie.jpg"
+  },
+  {
+    "name": "Black Hat",
+    "brand": "Metalcorp",
+    "price": "$32 * ON SALE *",
+    "spec": "Black · One Size",
+    "url": "https://www.fwrd.com/product-metalwood-studio-metalcorp-dad-hat-in-black/MDIF-MA7/?d=Mens&tCurrency=USD&tCountryCode=US&utm_source=google&utm_medium=cpc&utm_campaign=PMax:+Product+Listing+Ads+-+FWRD+-+Mens&gclsrc=aw.ds&gad_source=1&gad_campaignid=19672048316&gbraid=0AAAAADyLQd4YGpgNuPIGRgM5_jMn_vZdP&gclid=CjwKCAjw5NvPBhAoEiwA_2egfn24azwxqHdGo3Sr9RrAfpcCQzQCVjQfUjQZccfNL52SNL6cTbl-AxoCnnMQAvD_BwE",
+    "image": "images/metalcorp.jpg"
+  },
+  {
+    "name": "Sherpa Headcover",
+    "brand": "Apres Golf",
+    "price": "$88",
+    "spec": "Navy w/ Navy Trim · Hybrid",
+    "url": "https://apresgolf.com/products/nike-vintage-patch-sherpa-fleece-headcover?variant=45030896206064",
+    "image": "images/sherpaheadcover.jpg"
   },
   {
     "name": "Just a Placeholder",
