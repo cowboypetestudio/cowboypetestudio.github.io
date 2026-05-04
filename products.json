@@ -24,20 +24,20 @@
     "image": "images/sunnies.jpg"
   },
   {
-    "name": "Field Watch",
-    "brand": "Hamilton Khaki",
-    "price": "$495",
-    "spec": "38mm · Black dial",
-    "url": "https://example.com/watch",
-    "image": "images/liteduffel.jpg"
+    "name": "Golf Towel",
+    "brand": "Good Good Golf",
+    "price": "$25",
+    "spec": "",
+    "url": "https://goodgoodgolf.com/collections/golf-towels/products/born-to-golf-jacquard-towel",
+    "image": "images/golftowel.jpg"
   },
   {
-    "name": "Linen Bath Towel",
-    "brand": "Hawkins New York",
-    "price": "$58",
-    "spec": "Bone · 30 × 56",
-    "url": "https://example.com/towel",
-    "image": "images/liteduffel.jpg"
+    "name": "Golf Shoes",
+    "brand": "Reebok",
+    "price": "$100",
+    "spec": "Color: Chalk/Navy · Size: 9",
+    "url": "https://www.reebok.com/collections/golf-shoes/products/reebok-club-c-golf-shoes-chalk-vintage-chalk-vector-navy-139367",
+    "image": "images/golfshoes.jpg"
   },
   {
     "name": "Cast Iron Skillet",
