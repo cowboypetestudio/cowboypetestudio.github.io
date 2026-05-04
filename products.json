@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Library Reading Lamp",
+    "brand": "Anglepoise",
+    "price": "$329",
+    "spec": "Type 75 / Margaret Howell",
+    "url": "https://example.com/lamp",
+    "image": ""
+  },
+  {
+    "name": "Cotton Crewneck",
+    "brand": "Sunspel",
+    "price": "$140",
+    "spec": "Size M · Navy",
+    "url": "https://example.com/crew",
+    "image": ""
+  },
+  {
+    "name": "Pocket Notebook (Set of 3)",
+    "brand": "Midori MD",
+    "price": "$24",
+    "spec": "A6 · Blank",
+    "url": "https://example.com/notebook",
+    "image": ""
+  },
+  {
+    "name": "Field Watch",
+    "brand": "Hamilton Khaki",
+    "price": "$495",
+    "spec": "38mm · Black dial",
+    "url": "https://example.com/watch",
+    "image": ""
+  },
+  {
+    "name": "Linen Bath Towel",
+    "brand": "Hawkins New York",
+    "price": "$58",
+    "spec": "Bone · 30 × 56",
+    "url": "https://example.com/towel",
+    "image": ""
+  },
+  {
+    "name": "Cast Iron Skillet",
+    "brand": "Borough Furnace",
+    "price": "$210",
+    "spec": "10 in · Smoothed",
+    "url": "https://example.com/skillet",
+    "image": ""
+  },
+  {
+    "name": "Chore Coat",
+    "brand": "Vetra",
+    "price": "$185",
+    "spec": "Hydrone · Size 2",
+    "url": "https://example.com/coat",
+    "image": ""
+  },
+  {
+    "name": "Espresso Cups (Pair)",
+    "brand": "Hasami",
+    "price": "$36",
+    "spec": "Black · 3 oz",
+    "url": "https://example.com/cups",
+    "image": ""
+  }
+]
