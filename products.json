@@ -72,6 +72,14 @@
     "image": "images/8.jpg"
   },
   {
+    "name": "Mt. Fuji Print",
+    "brand": "Peter Yan Studio",
+    "price": "$130",
+    "spec": "Premium Lustre Paper · 18x24 IN",
+    "url": "https://www.etsy.com/listing/1736507313/mt-fuji-lawson-print-japan-landscape?ref=user_profile&frs=1&variation0=5413777299&variation1=5413777297",
+    "image": "images/34.jpg"
+  },
+  {
     "name": "LS Knit Polo",
     "brand": "Rhythm",
     "price": "$90",
@@ -216,6 +224,14 @@
     "image": "images/24.jpg"
   },
   {
+    "name": "Surf Print",
+    "brand": "Sandgrain Studio",
+    "price": "$78",
+    "spec": "Natural Wood · 12X18",
+    "url": "https://sandgrainstudio.com/products/surfing-ride-the-wave?variant=46401742831864",
+    "image": "images/31.jpg"
+  },
+  {
     "name": "Sherpa Headcover",
     "brand": "Apres Golf",
     "price": "$88",
@@ -230,5 +246,21 @@
     "spec": "160g",
     "url": "https://seabrafoods.com/?utm_source=organicjLj69f83f6b32757b4c94a64257&utm_campaign=&utm_medium=&utm_content=&utm_term=",
     "image": "images/26.jpg"
+  }
+  {
+    "name": "Embers Print",
+    "brand": "PSTR Studio",
+    "price": "$109",
+    "spec": "Black Alu. Frame · 18x24 IN",
+    "url": "https://www.pstrstudio.com/products/marin-embers?variant=38182987169941",
+    "image": "images/32.jpg"
+  },
+  {
+    "name": "Metal Sign",
+    "brand": "Sinclair",
+    "price": "$55",
+    "spec": "One Size",
+    "url": "https://www.etsy.com/listing/1475527753/vintage-antique-style-metal-sign?ref=user_profile&frs=1",
+    "image": "images/33.jpg"
   }
 ]
