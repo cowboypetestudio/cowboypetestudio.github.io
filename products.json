@@ -294,5 +294,13 @@
     "spec": "One Size",
     "url": "https://www.soosatelier.com/products/early-bird-mug",
     "image": "images/37.jpg"
+  },
+  {
+    "name": "90s Straight Jeans",
+    "brand": "Abercrombie",
+    "price": "$80",
+    "spec": "Olive Wash · 32x30",
+    "url": "https://www.abercrombie.com/shop/us/p/90s-straight-jean-61812831?categoryId=67994827&faceout=model&seq=83&pagefm=navigation-grid&prodvm=navigation-grid",
+    "image": "images/39.jpg"
   }
 ]
