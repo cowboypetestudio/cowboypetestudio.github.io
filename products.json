@@ -13,7 +13,7 @@
     "price": "$140",
     "spec": "Size M · Navy",
     "url": "https://example.com/crew",
-    "image": ""
+    "image": "images/liteduffel.jpg"
   },
   {
     "name": "Pocket Notebook (Set of 3)",
@@ -21,7 +21,7 @@
     "price": "$24",
     "spec": "A6 · Blank",
     "url": "https://example.com/notebook",
-    "image": ""
+    "image": "images/liteduffel.jpg"
   },
   {
     "name": "Field Watch",
@@ -29,7 +29,7 @@
     "price": "$495",
     "spec": "38mm · Black dial",
     "url": "https://example.com/watch",
-    "image": ""
+    "image": "images/liteduffel.jpg"
   },
   {
     "name": "Linen Bath Towel",
@@ -37,7 +37,7 @@
     "price": "$58",
     "spec": "Bone · 30 × 56",
     "url": "https://example.com/towel",
-    "image": ""
+    "image": "images/liteduffel.jpg"
   },
   {
     "name": "Cast Iron Skillet",
@@ -45,7 +45,7 @@
     "price": "$210",
     "spec": "10 in · Smoothed",
     "url": "https://example.com/skillet",
-    "image": ""
+    "image": "images/liteduffel.jpg"
   },
   {
     "name": "Chore Coat",
