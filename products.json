@@ -262,5 +262,29 @@
     "spec": "One Size",
     "url": "https://www.etsy.com/listing/1475527753/vintage-antique-style-metal-sign?ref=user_profile&frs=1",
     "image": "images/33.jpg"
+  },
+  {
+    "name": "Hybrid Headcover",
+    "brand": "GRLA",
+    "price": "$25",
+    "spec": "Size: Hybrid",
+    "url": "https://www.guerrilla-golf.com/products/dude-abides-headcover?variant=51304960491818&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&tw_source=google&tw_adid=&tw_campaign=21269574121&tw_kwdid=&gad_source=1&gad_campaignid=21265686938&gbraid=0AAAAABdCpjNHFqxJVfJAZVw4x7ual8pvF&gclid=Cj0KCQjwh-HPBhCIARIsAC0p3cfroNbqAJLTQCf7ktjcafRWiSWwSMST5WD6LPigB6pvkUFjx2xZBkgaAunUEALw_wcB",
+    "image": "images/35.jpg"
+  },
+  {
+    "name": "Sticker Pack",
+    "brand": "Goodlids",
+    "price": "$5",
+    "spec": "One Size",
+    "url": "https://goodlids.com/products/signature-sticker-pack?srsltid=AfmBOorPB1m1A1nsxiCPs5Ro6q0hPk0m2WF-eu12Z1dlnpRG2dIJIA5k",
+    "image": "images/36.jpg"
+  },
+  {
+    "name": "Coffee Mug",
+    "brand": "SOOS Atelier",
+    "price": "$20",
+    "spec": "One Size",
+    "url": "https://www.soosatelier.com/products/early-bird-mug",
+    "image": "images/37.jpg"
   }
 ]
