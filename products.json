@@ -8,20 +8,20 @@
     "image": "images/liteduffel.jpg"
   },
   {
-    "name": "Cotton Crewneck",
-    "brand": "Sunspel",
-    "price": "$140",
-    "spec": "Size M · Navy",
-    "url": "https://example.com/crew",
-    "image": "images/liteduffel.jpg"
+    "name": "Barrel Driver Headcover",
+    "brand": "Taylor Made",
+    "price": "$50",
+    "spec": "Color: Grey",
+    "url": "https://www.taylormadegolf.com/Barrel-Driver-Headcover/V9735001.html?lang=en_US&gad_source=1",
+    "image": "images/barreldriverheadcover.jpg"
   },
   {
-    "name": "Pocket Notebook (Set of 3)",
-    "brand": "Midori MD",
-    "price": "$24",
-    "spec": "A6 · Blank",
-    "url": "https://example.com/notebook",
-    "image": "images/liteduffel.jpg"
+    "name": "AIM Sunnies",
+    "brand": "Always in Motion",
+    "price": "$125",
+    "spec": "Black Crystal · Blank",
+    "url": "https://alwaysinmotion.co.uk/products/aim-sunnies-black-crystal?variant=56086452961606",
+    "image": "images/sunnies.jpg"
   },
   {
     "name": "Field Watch",
