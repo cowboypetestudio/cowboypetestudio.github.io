@@ -108,15 +108,7 @@
     "brand": "Katin",
     "price": "$37",
     "spec": "Black · Size: L",
-    "url": "https://example.com/cups",
-    "image": ""
-  },
-  {
-    "name": "Just a Placeholder",
-    "brand": "Hasami",
-    "price": "Free",
-    "spec": "Black · 3 oz",
-    "url": "https://katinusa.com/collections/tees/products/geographic-box-fit-tee",
+    "url": "hhttps://katinusa.com/collections/tees/products/geographic-box-fit-tee",
     "image": "images/geoshirt.jpg"
   },
   {
@@ -188,14 +180,6 @@
     "brand": "IDIOMA",
     "price": "$145",
     "spec": "Heather Ash · Size: XL",
-    "url": "https://example.com/cups",
-    "image": ""
-  },
-  {
-    "name": "Just a Placeholder",
-    "brand": "Hasami",
-    "price": "Free",
-    "spec": "Black · 3 oz",
     "url": "https://idioma.world/products/science-culture-hood?srsltid=AfmBOorrGFDDvYebex5xVbN3DMgUt73OHNlL4xBe9OiR_kvGZ-MsJltv",
     "image": "images/sciencehoodie.jpg"
   },
@@ -213,7 +197,7 @@
     "price": "$88",
     "spec": "Navy w/ Navy Trim · Hybrid",
     "url": "https://apresgolf.com/products/nike-vintage-patch-sherpa-fleece-headcover?variant=45030896206064",
-    "image": "images/sherpaheadcover.jpg"
+    "image": "images/sherpaheadcovernike.jpg"
   },
   {
     "name": "Just a Placeholder",
