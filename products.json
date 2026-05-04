@@ -128,6 +128,14 @@
     "image": "images/15.jpg"
   },
   {
+    "name": "Contax T2",
+    "brand": "Cute Camera Co.",
+    "price": "$2,700",
+    "spec": "Very Good",
+    "url": "https://cute.camera/products/contax-t2-35mm-point-and-shoot-film-camera?variant=50869229256984",
+    "image": "images/29.jpg"
+  },
+  {
     "name": "Camo Hat",
     "brand": "Metalwood",
     "price": "$42",
